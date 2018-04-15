@@ -20,7 +20,7 @@ class BlockChain
      */
     private function createGenesisBlock()
     {
-        return new Block(0, strtotime("2017-01-01"), "Genesis Block");
+        return new Block(0, strtotime("now"), "Genesis @alemany Block");
     }
     /*
       Funció per minar un block en base a dificultat dels caracters seleccionats.
