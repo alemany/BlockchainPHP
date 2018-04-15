@@ -27,7 +27,7 @@ class BlockChain
      */
     public function mine($block)
     {
-        while (substr($block->hash, 0, $this->difficulty) !== $this->initialchars) {
+        while (strcmp(substr($block->hash, 0, $this->difficulty), $this->initialchars) !== 0) {
             $block->nonce++;
             $block->hash = $block->calculateHash();
         }
